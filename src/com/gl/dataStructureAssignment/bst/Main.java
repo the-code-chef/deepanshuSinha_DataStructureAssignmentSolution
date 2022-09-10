@@ -5,13 +5,13 @@ public class Main {
     public static void main(String[] args) {
 
         BSTToSkewedConverter tree = new BSTToSkewedConverter();
-        tree.insert(50);
-        tree.insert(30);
-        tree.insert(60);
-        tree.insert(10);
-        tree.insert(55);
+        Node root = new Node(50);
+        root.left = new Node(30);
+        root.right = new Node(60);
+        root.left.left = new Node(10);
+        root.right.left = new Node(55);
 
-        tree.flattenBSTToSkewed(tree.root);
+        tree.flattenBSTToSkewed(root);
         System.out.print("Rightly Skewed Tree is as following: ");
         tree.traverseRightSkewed(tree.headNode);
     }

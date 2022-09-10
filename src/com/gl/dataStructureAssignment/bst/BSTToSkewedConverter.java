@@ -6,24 +6,6 @@ public class BSTToSkewedConverter {
     Node prevNode = null;
     Node headNode = null;
 
-    void insert(int data) {
-        root = insertNode(root, data);
-    }
-
-    Node insertNode(Node root, int data) {
-        if (root == null) {
-            root = new Node(data);
-            return root;
-        }
-
-        if (data < root.val)
-            root.left = insertNode(root.left, data);
-        else if (data > root.val)
-            root.right = insertNode(root.right, data);
-
-        return root;
-    }
-
     /**
      * Create the Skewed Tree
      *
